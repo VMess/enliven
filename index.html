@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        .        </title>
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+
+        .page {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(170deg, gray, lightgray);
+        }
+
+        .image {
+            height: 90vmin;
+            box-shadow: 4px 4px 24px black;
+        }
+
+        img {
+            height: 100%;
+            opacity: 0;
+        }
+
+        .socket {
+            position: absolute;
+            width: 1%;
+            height: 2%;
+            left: 35%;
+            top: 49%;
+        }
+
+
+        p {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 6vmin;
+            text-align: center;
+        }
+
+        @keyframes introduce {
+            0% {opacity: 0; transform: translateX(10%)}
+            30% {opacity: 1}
+            40% {opacity: 1}
+            70% {opacity: 0}
+            100% {opacity: 0; transform: translateX(-10%)}
+        }
+
+        @media screen {
+            .hidden {
+                display: none;
+            }
+
+            .label {
+                position: absolute;
+                left: -20vmin;
+                top: -20vmin;
+                width: 40vmin;
+                height: 40vmin;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: gray;
+                animation: 4s forwards introduce;
+            }
+        }
+
+        @media print {
+            .label {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener('load',function(e,d,c,b,a){
+            function f(e) {
+                if (e.clientX < this.getBoundingClientRect().width / 2) {
+                    this.hide(this.prev);
+                } else {
+                    this.hide(this.next);
+                }
+            }
+            function h(r) {
+                this.classList.add('hidden');
+                if (r && r.show) {
+                    r.show();
+                }
+            }
+            function s() {
+                this.classList.remove('hidden');
+            }
+            d = e.target;
+            a = d.querySelectorAll('.page');
+            for (c = 0, b = a[a.length - 1]; e = a[c]; c += 1) {
+                b.next = e;
+                e.prev = b;
+                e.hide = h;
+                e.show = s;
+                e.addEventListener('click',f);
+                b = e;
+                e.hide();
+            }
+            a[0].show();
+        });
+    </script>
+</head>
+
+<body>
+        <div class="page">
+            <div class="image" style="background: url('11.Home Screen.PNG'); background-repeat: no-repeat; background-position: center; background-size: contain;">
+                <img src="11.Home Screen.PNG">
+            </div>
+            <div class="socket">
+                <div class="label">
+                    <p>
+                    Home Screen                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="image" style="background: url('11a.Home Screen on mobile.png'); background-repeat: no-repeat; background-position: center; background-size: contain;">
+                <img src="11a.Home Screen on mobile.png">
+            </div>
+            <div class="socket">
+                <div class="label">
+                    <p>
+                    Home Screen on mobile                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="image" style="background: url('11b. Home Screen Responsive.png'); background-repeat: no-repeat; background-position: center; background-size: contain;">
+                <img src="11b. Home Screen Responsive.png">
+            </div>
+            <div class="socket">
+                <div class="label">
+                    <p>
+                     Home Screen Responsive                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="image" style="background: url('12. food for thought.PNG'); background-repeat: no-repeat; background-position: center; background-size: contain;">
+                <img src="12. food for thought.PNG">
+            </div>
+            <div class="socket">
+                <div class="label">
+                    <p>
+                     food for thought                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="image" style="background: url('13. gift giving.PNG'); background-repeat: no-repeat; background-position: center; background-size: contain;">
+                <img src="13. gift giving.PNG">
+            </div>
+            <div class="socket">
+                <div class="label">
+                    <p>
+                     gift giving                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="image" style="background: url('14. creative gift giving.PNG'); background-repeat: no-repeat; background-position: center; background-size: contain;">
+                <img src="14. creative gift giving.PNG">
+            </div>
+            <div class="socket">
+                <div class="label">
+                    <p>
+                     creative gift giving                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="image" style="background: url('15.fitness.PNG'); background-repeat: no-repeat; background-position: center; background-size: contain;">
+                <img src="15.fitness.PNG">
+            </div>
+            <div class="socket">
+                <div class="label">
+                    <p>
+                    fitness                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="image" style="background: url('16.fashionista.PNG'); background-repeat: no-repeat; background-position: center; background-size: contain;">
+                <img src="16.fashionista.PNG">
+            </div>
+            <div class="socket">
+                <div class="label">
+                    <p>
+                    fashionista                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="image" style="background: url('17.favorite finds and footer.png'); background-repeat: no-repeat; background-position: center; background-size: contain;">
+                <img src="17.favorite finds and footer.png">
+            </div>
+            <div class="socket">
+                <div class="label">
+                    <p>
+                    favorite finds and footer                        </p>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
